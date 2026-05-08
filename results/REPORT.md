@@ -5,17 +5,16 @@ Compilation cost is excluded from measurements.
 
 ## Host
 
-| Field        | Value                                          |
-| ------------ | ---------------------------------------------- |
-| OS           | darwin                                         |
-| Arch         | amd64                                          |
-| CPU          | Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz       |
-| Logical CPUs | 12                                             |
-| GOMAXPROCS   | 12                                             |
-| Total memory | 16.00 GB                                       |
-| Go version   | go1.26.2                                       |
-| Package      | github.com/jokruger/kavun-benchmark/bench/goja |
-| Run at (UTC) | 2026-05-08T08:24:44Z                           |
+| Field        | Value                                    |
+| ------------ | ---------------------------------------- |
+| OS           | darwin                                   |
+| Arch         | amd64                                    |
+| CPU          | Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz |
+| Logical CPUs | 12                                       |
+| GOMAXPROCS   | 12                                       |
+| Total memory | 16.00 GB                                 |
+| Go version   | go1.26.2                                 |
+| Run at (UTC) | 2026-05-08T08:24:44Z                     |
 
 ## Summary
 

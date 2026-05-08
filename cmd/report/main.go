@@ -303,7 +303,6 @@ func renderHost(out *os.File, host map[string]string) {
 		{"GOMAXPROCS", "host_gomaxprocs"},
 		{"Total memory", "host_totalmem"},
 		{"Go version", "host_goversion"},
-		{"Package", "pkg"},
 		{"Run at (UTC)", "host_timestamp"},
 	}
 	any := false
