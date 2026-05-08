@@ -1,0 +1,17 @@
+words = [
+    "benchmem",
+    "cpus",
+    "cta",
+    "geomean",
+    "goja",
+    "gomaxprocs",
+    "goos",
+    "goversion",
+    "memsize",
+    "mkdir",
+    "numcpu",
+    "numerics",
+    "rta",
+    "tengo",
+    "totalmem",
+]
