@@ -54,6 +54,16 @@ local last = 0
 for i = 1, 1000 do last = counter() end
 return last
 `,
+			EngineRisor: `
+mk := func() {
+  c := 0
+  return func() { c++; return c }
+}
+counter := mk()
+last := 0
+for i := 0; i < 1000; i++ { last = counter() }
+last
+`,
 		},
 	}
 }

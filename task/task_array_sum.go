@@ -42,6 +42,13 @@ local s = 0
 for i = 1, #a do s = s + a[i] end
 return s
 `,
+			EngineRisor: `
+a := []
+for i := 0; i < 500; i++ { a.append(i) }
+s := 0
+for i := 0; i < len(a); i++ { s += a[i] }
+s
+`,
 		},
 	}
 }

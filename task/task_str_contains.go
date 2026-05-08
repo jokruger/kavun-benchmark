@@ -72,6 +72,18 @@ for r = 0, size*2-1 do
 end
 return n
 `,
+			EngineRisor: `
+size := 100
+s := ""
+for r := 0; r < size*2; r++ {
+  if r % 2 == 0 { s += chr(32+r) }
+}
+n := 0
+for r := 0; r < size*2; r++ {
+  if strings.contains(s, chr(32+r)) { n++ }
+}
+n
+`,
 		},
 	}
 }

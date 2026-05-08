@@ -68,6 +68,18 @@ for i = 1, #s do
 end
 return n
 `,
+			EngineRisor: `
+s := []
+for i := 0; i < 100; i++ { s.append(i) }
+n := 0
+for i := 0; i < len(s); i++ {
+  for j := 0; j < len(s); j++ {
+    s[j] += s[i]
+    n++
+  }
+}
+n
+`,
 		},
 	}
 }

@@ -32,6 +32,11 @@ local s = ""
 for i = 1, 200 do s = s .. "x" end
 return #s
 `,
+			EngineRisor: `
+s := ""
+for i := 0; i < 200; i++ { s += "x" }
+len(s)
+`,
 		},
 	}
 }

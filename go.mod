@@ -7,6 +7,7 @@ require (
 	github.com/d5/tengo/v2 v2.17.0
 	github.com/dop251/goja v0.0.0-20260311135729-065cd970411c
 	github.com/jokruger/kavun v0.1.6
+	github.com/risor-io/risor v1.8.1
 	github.com/yuin/gopher-lua v1.1.2
 )
 

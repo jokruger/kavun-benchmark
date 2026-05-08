@@ -39,6 +39,13 @@ local function fib(n)
 end
 return fib(25)
 `,
+			EngineRisor: `
+func fib(n) {
+  if n < 2 { return n }
+  return fib(n-1) + fib(n-2)
+}
+fib(25)
+`,
 		},
 	}
 }

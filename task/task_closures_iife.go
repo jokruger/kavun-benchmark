@@ -42,6 +42,13 @@ for i = 0, 999 do
 end
 return out
 `,
+			EngineRisor: `
+out := 0
+for i := 0; i < 1000; i++ {
+  func(x) { out += x }(i)
+}
+out
+`,
 		},
 	}
 }
