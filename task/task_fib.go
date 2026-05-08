@@ -25,6 +25,13 @@ __result = fib(25)
 function fib(n) { return n < 2 ? n : fib(n-1) + fib(n-2); }
 fib(25);
 `,
+			EngineGoLua: `
+local function fib(n)
+  if n < 2 then return n end
+  return fib(n-1) + fib(n-2)
+end
+return fib(25)
+`,
 		},
 	}
 }

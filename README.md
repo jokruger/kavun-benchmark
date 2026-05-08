@@ -12,6 +12,7 @@ Compilation cost is intentionally excluded from measurements.
   - Kavun0 = zero pre-allocs configuration
 - [Tengo](https://github.com/d5/tengo)
 - [Goja](https://github.com/dop251/goja)
+- [go-lua](https://github.com/Shopify/go-lua)
 
 ### Note on Kavun vs Kavun0
 

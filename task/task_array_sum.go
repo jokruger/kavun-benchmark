@@ -28,6 +28,13 @@ var s = 0;
 for (var i = 0; i < a.length; i++) { s += a[i]; }
 s;
 `,
+			EngineGoLua: `
+local a = {}
+for i = 0, 499 do a[#a+1] = i end
+local s = 0
+for i = 1, #a do s = s + a[i] end
+return s
+`,
 		},
 	}
 }

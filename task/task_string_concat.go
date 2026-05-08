@@ -22,6 +22,11 @@ var s = "";
 for (var i = 0; i < 200; i++) { s += "x"; }
 s.length;
 `,
+			EngineGoLua: `
+local s = ""
+for i = 1, 200 do s = s .. "x" end
+return #s
+`,
 		},
 	}
 }

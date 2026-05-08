@@ -3,6 +3,7 @@ module github.com/jokruger/kavun-benchmark
 go 1.26
 
 require (
+	github.com/Shopify/go-lua v0.0.0-20250718183320-1e37f32ad7d0
 	github.com/d5/tengo/v2 v2.17.0
 	github.com/dop251/goja v0.0.0-20260311135729-065cd970411c
 	github.com/jokruger/kavun v0.1.6

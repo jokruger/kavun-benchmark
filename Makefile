@@ -2,7 +2,7 @@
 
 RESULTS := results/raw.txt
 REPORT  := results/REPORT.md
-COUNT   ?= 5
+COUNT   ?= 1
 BENCHTIME ?= 1s
 PENALTY ?= 2.0
 

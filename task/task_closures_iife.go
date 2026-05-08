@@ -28,6 +28,13 @@ for (var i = 0; i < 1000; i++) {
 }
 out;
 `,
+			EngineGoLua: `
+local out = 0
+for i = 0, 999 do
+  (function(x) out = out + x end)(i)
+end
+return out
+`,
 		},
 	}
 }

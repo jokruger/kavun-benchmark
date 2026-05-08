@@ -8,6 +8,7 @@ const (
 	EngineKavun = "kavun"
 	EngineTengo = "tengo"
 	EngineGoja  = "goja"
+	EngineGoLua = "golua"
 )
 
 // Task is a single canonical workload.

@@ -1,6 +1,5 @@
 # TODO List
 
-- go-lua
 - risor
 - gentee
 - goal

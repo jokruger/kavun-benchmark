@@ -22,6 +22,11 @@ var s = 0;
 for (var i = 1; i <= 10000; i++) { s += i; }
 s;
 `,
+			EngineGoLua: `
+local s = 0
+for i = 1, 10000 do s = s + i end
+return s
+`,
 		},
 	}
 }

@@ -32,6 +32,14 @@ function fib(x, a, b) {
 }
 fib(20, 0, 1);
 `,
+			EngineGoLua: `
+local function fib(x, a, b)
+  if x == 0 then return a end
+  if x == 1 then return b end
+  return fib(x-1, b, a+b)
+end
+return fib(20, 0, 1)
+`,
 		},
 	}
 }

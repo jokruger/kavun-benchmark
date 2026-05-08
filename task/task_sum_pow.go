@@ -23,6 +23,11 @@ var s = 0;
 for (var i = 1; i < 10000; i++) { s += i * i; }
 s;
 `,
+			EngineGoLua: `
+local s = 0
+for i = 1, 9999 do s = s + i * i end
+return s
+`,
 		},
 	}
 }

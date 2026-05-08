@@ -44,6 +44,18 @@ for (var i = 0; i < s.length; i++) {
 }
 n;
 `,
+			EngineGoLua: `
+local s = {}
+for i = 0, 99 do s[#s+1] = i end
+local n = 0
+for i = 1, #s do
+  for j = 1, #s do
+    s[j] = s[j] + s[i]
+    n = n + 1
+  end
+end
+return n
+`,
 		},
 	}
 }
