@@ -60,6 +60,18 @@ for r = 0, size*2-1 do
 end
 return n
 `,
+			EngineGopher: `
+local size = 100
+local s = ""
+for r = 0, size*2-1 do
+  if r % 2 == 0 then s = s .. string.char(32+r) end
+end
+local n = 0
+for r = 0, size*2-1 do
+  if string.find(s, string.char(32+r), 1, true) then n = n + 1 end
+end
+return n
+`,
 		},
 	}
 }

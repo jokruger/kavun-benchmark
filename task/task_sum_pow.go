@@ -28,6 +28,11 @@ local s = 0
 for i = 1, 9999 do s = s + i * i end
 return s
 `,
+			EngineGopher: `
+local s = 0
+for i = 1, 9999 do s = s + i * i end
+return s
+`,
 		},
 	}
 }

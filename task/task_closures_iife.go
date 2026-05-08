@@ -35,6 +35,13 @@ for i = 0, 999 do
 end
 return out
 `,
+			EngineGopher: `
+local out = 0
+for i = 0, 999 do
+  (function(x) out = out + x end)(i)
+end
+return out
+`,
 		},
 	}
 }

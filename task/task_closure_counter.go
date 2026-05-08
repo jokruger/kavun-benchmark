@@ -44,6 +44,16 @@ local last = 0
 for i = 1, 1000 do last = counter() end
 return last
 `,
+			EngineGopher: `
+local function make()
+  local c = 0
+  return function() c = c + 1 return c end
+end
+local counter = make()
+local last = 0
+for i = 1, 1000 do last = counter() end
+return last
+`,
 		},
 	}
 }

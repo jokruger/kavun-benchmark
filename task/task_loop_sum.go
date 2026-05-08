@@ -27,6 +27,11 @@ local s = 0
 for i = 1, 10000 do s = s + i end
 return s
 `,
+			EngineGopher: `
+local s = 0
+for i = 1, 10000 do s = s + i end
+return s
+`,
 		},
 	}
 }

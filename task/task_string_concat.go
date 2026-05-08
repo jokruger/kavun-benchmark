@@ -27,6 +27,11 @@ local s = ""
 for i = 1, 200 do s = s .. "x" end
 return #s
 `,
+			EngineGopher: `
+local s = ""
+for i = 1, 200 do s = s .. "x" end
+return #s
+`,
 		},
 	}
 }
