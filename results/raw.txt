@@ -1,0 +1,287 @@
+host_numcpu: 12
+host_gomaxprocs: 12
+host_goversion: go1.26.2
+host_totalmem: 16.00 GB
+host_timestamp: 2026-05-08T14:49:21Z
+PASS
+ok  	github.com/jokruger/kavun-benchmark/bench	0.416s
+goos: darwin
+goarch: amd64
+pkg: github.com/jokruger/kavun-benchmark/bench/goja
+cpu: Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz
+BenchmarkGoja/fib-12         	      32	  36357470 ns/op	    8152 B/op	     392 allocs/op
+BenchmarkGoja/fib-12         	      32	  36209862 ns/op	    8152 B/op	     392 allocs/op
+BenchmarkGoja/fib-12         	      32	  36259754 ns/op	    8152 B/op	     392 allocs/op
+BenchmarkGoja/fib-12         	      32	  36230638 ns/op	    8152 B/op	     392 allocs/op
+BenchmarkGoja/fib-12         	      32	  36499016 ns/op	    8152 B/op	     392 allocs/op
+BenchmarkGoja/fib_tail-12    	  199772	      5405 ns/op	    5200 B/op	      23 allocs/op
+BenchmarkGoja/fib_tail-12    	  219957	      5415 ns/op	    5200 B/op	      23 allocs/op
+BenchmarkGoja/fib_tail-12    	  218772	      5411 ns/op	    5200 B/op	      23 allocs/op
+BenchmarkGoja/fib_tail-12    	  219687	      5414 ns/op	    5200 B/op	      23 allocs/op
+BenchmarkGoja/fib_tail-12    	  218422	      5417 ns/op	    5200 B/op	      23 allocs/op
+BenchmarkGoja/loop_sum-12    	     262	   4506544 ns/op	 1117997 B/op	   39729 allocs/op
+BenchmarkGoja/loop_sum-12    	     268	   4507082 ns/op	 1117998 B/op	   39729 allocs/op
+BenchmarkGoja/loop_sum-12    	     264	   4511578 ns/op	 1117995 B/op	   39729 allocs/op
+BenchmarkGoja/loop_sum-12    	     265	   4463760 ns/op	 1117997 B/op	   39729 allocs/op
+BenchmarkGoja/loop_sum-12    	     264	   4974765 ns/op	 1117996 B/op	   39729 allocs/op
+BenchmarkGoja/sum_pow-12     	     222	   5356235 ns/op	 1197870 B/op	   49723 allocs/op
+BenchmarkGoja/sum_pow-12     	     224	   5479480 ns/op	 1197872 B/op	   49723 allocs/op
+BenchmarkGoja/sum_pow-12     	     222	   5395153 ns/op	 1197870 B/op	   49723 allocs/op
+BenchmarkGoja/sum_pow-12     	     224	   5451556 ns/op	 1197868 B/op	   49723 allocs/op
+BenchmarkGoja/sum_pow-12     	     220	   5382060 ns/op	 1197869 B/op	   49723 allocs/op
+BenchmarkGoja/closure_counter-12         	    2614	    455416 ns/op	  109752 B/op	    3514 allocs/op
+BenchmarkGoja/closure_counter-12         	    2574	    454606 ns/op	  109752 B/op	    3514 allocs/op
+BenchmarkGoja/closure_counter-12         	    2547	    452615 ns/op	  109752 B/op	    3514 allocs/op
+BenchmarkGoja/closure_counter-12         	    2551	    458924 ns/op	  109752 B/op	    3514 allocs/op
+BenchmarkGoja/closure_counter-12         	    2604	    457740 ns/op	  109752 B/op	    3514 allocs/op
+BenchmarkGoja/closures_iife-12           	    1264	    908697 ns/op	  782106 B/op	   10728 allocs/op
+BenchmarkGoja/closures_iife-12           	    1321	    907113 ns/op	  782107 B/op	   10728 allocs/op
+BenchmarkGoja/closures_iife-12           	    1309	    906638 ns/op	  782107 B/op	   10728 allocs/op
+BenchmarkGoja/closures_iife-12           	    1309	    906262 ns/op	  782106 B/op	   10728 allocs/op
+BenchmarkGoja/closures_iife-12           	    1304	    908873 ns/op	  782111 B/op	   10728 allocs/op
+BenchmarkGoja/string_concat-12           	   13123	     91746 ns/op	   44080 B/op	     804 allocs/op
+BenchmarkGoja/string_concat-12           	   13088	     91906 ns/op	   44080 B/op	     804 allocs/op
+BenchmarkGoja/string_concat-12           	   12973	     92398 ns/op	   44080 B/op	     804 allocs/op
+BenchmarkGoja/string_concat-12           	   13108	     91309 ns/op	   44080 B/op	     804 allocs/op
+BenchmarkGoja/string_concat-12           	   13124	     91497 ns/op	   44080 B/op	     804 allocs/op
+BenchmarkGoja/str_contains-12            	    3751	    312281 ns/op	   61192 B/op	    1863 allocs/op
+BenchmarkGoja/str_contains-12            	    3636	    316230 ns/op	   61192 B/op	    1863 allocs/op
+BenchmarkGoja/str_contains-12            	    3710	    314444 ns/op	   61192 B/op	    1863 allocs/op
+BenchmarkGoja/str_contains-12            	    3825	    316126 ns/op	   61192 B/op	    1863 allocs/op
+BenchmarkGoja/str_contains-12            	    3631	    317478 ns/op	   61192 B/op	    1863 allocs/op
+BenchmarkGoja/array_sum-12               	    2122	    561499 ns/op	  113712 B/op	    4368 allocs/op
+BenchmarkGoja/array_sum-12               	    2104	    559418 ns/op	  113712 B/op	    4368 allocs/op
+BenchmarkGoja/array_sum-12               	    2102	    561107 ns/op	  113712 B/op	    4368 allocs/op
+BenchmarkGoja/array_sum-12               	    2139	    563975 ns/op	  113712 B/op	    4368 allocs/op
+BenchmarkGoja/array_sum-12               	    2119	    565403 ns/op	  113712 B/op	    4368 allocs/op
+BenchmarkGoja/nested_loop-12             	     170	   6875771 ns/op	 1133828 B/op	   39560 allocs/op
+BenchmarkGoja/nested_loop-12             	     171	   6923306 ns/op	 1133827 B/op	   39560 allocs/op
+BenchmarkGoja/nested_loop-12             	     172	   6875751 ns/op	 1133827 B/op	   39560 allocs/op
+BenchmarkGoja/nested_loop-12             	     172	   6932098 ns/op	 1133827 B/op	   39560 allocs/op
+BenchmarkGoja/nested_loop-12             	     172	   6951067 ns/op	 1133828 B/op	   39560 allocs/op
+PASS
+ok  	github.com/jokruger/kavun-benchmark/bench/goja	75.163s
+goos: darwin
+goarch: amd64
+pkg: github.com/jokruger/kavun-benchmark/bench/golua
+cpu: Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz
+BenchmarkGoLua/fib-12         	      56	  20240644 ns/op	 2542823 B/op	  317817 allocs/op
+BenchmarkGoLua/fib-12         	      57	  20425586 ns/op	 2542715 B/op	  317817 allocs/op
+BenchmarkGoLua/fib-12         	      52	  20372108 ns/op	 2542720 B/op	  317817 allocs/op
+BenchmarkGoLua/fib-12         	      57	  20525402 ns/op	 2542724 B/op	  317817 allocs/op
+BenchmarkGoLua/fib-12         	      57	  20442545 ns/op	 2542721 B/op	  317817 allocs/op
+BenchmarkGoLua/fib_tail-12    	  469675	      2523 ns/op	     544 B/op	      47 allocs/op
+BenchmarkGoLua/fib_tail-12    	  464992	      2550 ns/op	     544 B/op	      47 allocs/op
+BenchmarkGoLua/fib_tail-12    	  451639	      2538 ns/op	     544 B/op	      47 allocs/op
+BenchmarkGoLua/fib_tail-12    	  470163	      2554 ns/op	     544 B/op	      47 allocs/op
+BenchmarkGoLua/fib_tail-12    	  443130	      2547 ns/op	     544 B/op	      47 allocs/op
+BenchmarkGoLua/loop_sum-12    	    2498	    481515 ns/op	  240169 B/op	   30006 allocs/op
+BenchmarkGoLua/loop_sum-12    	    2470	    479459 ns/op	  240169 B/op	   30006 allocs/op
+BenchmarkGoLua/loop_sum-12    	    2502	    482235 ns/op	  240169 B/op	   30006 allocs/op
+BenchmarkGoLua/loop_sum-12    	    2473	    482447 ns/op	  240169 B/op	   30006 allocs/op
+BenchmarkGoLua/loop_sum-12    	    2462	    482651 ns/op	  240171 B/op	   30006 allocs/op
+BenchmarkGoLua/sum_pow-12     	    1826	    656355 ns/op	  320138 B/op	   40002 allocs/op
+BenchmarkGoLua/sum_pow-12     	    1827	    666693 ns/op	  320137 B/op	   40002 allocs/op
+BenchmarkGoLua/sum_pow-12     	    1813	    659639 ns/op	  320138 B/op	   40002 allocs/op
+BenchmarkGoLua/sum_pow-12     	    1815	    663040 ns/op	  320137 B/op	   40002 allocs/op
+BenchmarkGoLua/sum_pow-12     	    1791	    656711 ns/op	  320138 B/op	   40002 allocs/op
+BenchmarkGoLua/closure_counter-12         	   10000	    107915 ns/op	   24256 B/op	    3011 allocs/op
+BenchmarkGoLua/closure_counter-12         	   10000	    108760 ns/op	   24256 B/op	    3011 allocs/op
+BenchmarkGoLua/closure_counter-12         	   10000	    108011 ns/op	   24256 B/op	    3011 allocs/op
+BenchmarkGoLua/closure_counter-12         	   10000	    107991 ns/op	   24256 B/op	    3011 allocs/op
+BenchmarkGoLua/closure_counter-12         	   10000	    108142 ns/op	   24256 B/op	    3011 allocs/op
+BenchmarkGoLua/closures_iife-12           	   10000	    114537 ns/op	   24240 B/op	    3009 allocs/op
+BenchmarkGoLua/closures_iife-12           	   10000	    114165 ns/op	   24240 B/op	    3009 allocs/op
+BenchmarkGoLua/closures_iife-12           	   10000	    114098 ns/op	   24240 B/op	    3009 allocs/op
+BenchmarkGoLua/closures_iife-12           	   10000	    114321 ns/op	   24240 B/op	    3009 allocs/op
+BenchmarkGoLua/closures_iife-12           	   10000	    113837 ns/op	   24240 B/op	    3009 allocs/op
+BenchmarkGoLua/string_concat-12           	   22444	     52909 ns/op	   40808 B/op	    1403 allocs/op
+BenchmarkGoLua/string_concat-12           	   22546	     53359 ns/op	   40808 B/op	    1403 allocs/op
+BenchmarkGoLua/string_concat-12           	   22582	     53013 ns/op	   40808 B/op	    1403 allocs/op
+BenchmarkGoLua/string_concat-12           	   22561	     52925 ns/op	   40808 B/op	    1403 allocs/op
+BenchmarkGoLua/string_concat-12           	   22617	     53207 ns/op	   40808 B/op	    1403 allocs/op
+BenchmarkGoLua/str_contains-12            	    6763	    180567 ns/op	   56224 B/op	    3006 allocs/op
+BenchmarkGoLua/str_contains-12            	    6577	    179262 ns/op	   56224 B/op	    3006 allocs/op
+BenchmarkGoLua/str_contains-12            	    6601	    179436 ns/op	   56224 B/op	    3006 allocs/op
+BenchmarkGoLua/str_contains-12            	    6687	    179242 ns/op	   56224 B/op	    3006 allocs/op
+BenchmarkGoLua/str_contains-12            	    6758	    180450 ns/op	   56224 B/op	    3006 allocs/op
+BenchmarkGoLua/array_sum-12               	   10000	    104219 ns/op	   47096 B/op	    3518 allocs/op
+BenchmarkGoLua/array_sum-12               	   10000	    102744 ns/op	   47096 B/op	    3518 allocs/op
+BenchmarkGoLua/array_sum-12               	   10000	    103894 ns/op	   47096 B/op	    3518 allocs/op
+BenchmarkGoLua/array_sum-12               	   10000	    104477 ns/op	   47096 B/op	    3518 allocs/op
+BenchmarkGoLua/array_sum-12               	   10000	    104084 ns/op	   47096 B/op	    3518 allocs/op
+BenchmarkGoLua/nested_loop-12             	    1149	   1063738 ns/op	  331962 B/op	   40916 allocs/op
+BenchmarkGoLua/nested_loop-12             	    1141	   1044017 ns/op	  331962 B/op	   40916 allocs/op
+BenchmarkGoLua/nested_loop-12             	    1130	   1050870 ns/op	  331962 B/op	   40916 allocs/op
+BenchmarkGoLua/nested_loop-12             	    1126	   1038777 ns/op	  331961 B/op	   40916 allocs/op
+BenchmarkGoLua/nested_loop-12             	    1124	   1042082 ns/op	  331961 B/op	   40916 allocs/op
+PASS
+ok  	github.com/jokruger/kavun-benchmark/bench/golua	62.904s
+goos: darwin
+goarch: amd64
+pkg: github.com/jokruger/kavun-benchmark/bench/kavun
+cpu: Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz
+BenchmarkKavun/fib-12         	      90	  13454139 ns/op	       8 B/op	       1 allocs/op
+BenchmarkKavun/fib-12         	      81	  13465769 ns/op	       8 B/op	       1 allocs/op
+BenchmarkKavun/fib-12         	      90	  13515155 ns/op	       8 B/op	       1 allocs/op
+BenchmarkKavun/fib-12         	      87	  13417670 ns/op	       8 B/op	       1 allocs/op
+BenchmarkKavun/fib-12         	      82	  13430740 ns/op	       8 B/op	       1 allocs/op
+BenchmarkKavun/fib_tail-12    	  691118	      1666 ns/op	       8 B/op	       1 allocs/op
+BenchmarkKavun/fib_tail-12    	  739527	      1665 ns/op	       8 B/op	       1 allocs/op
+BenchmarkKavun/fib_tail-12    	  683570	      1710 ns/op	       8 B/op	       1 allocs/op
+BenchmarkKavun/fib_tail-12    	  749097	      1657 ns/op	       8 B/op	       1 allocs/op
+BenchmarkKavun/fib_tail-12    	  738360	      1647 ns/op	       8 B/op	       1 allocs/op
+BenchmarkKavun/loop_sum-12    	    2527	    472475 ns/op	       8 B/op	       1 allocs/op
+BenchmarkKavun/loop_sum-12    	    2500	    473222 ns/op	       8 B/op	       1 allocs/op
+BenchmarkKavun/loop_sum-12    	    2528	    475586 ns/op	       8 B/op	       1 allocs/op
+BenchmarkKavun/loop_sum-12    	    2512	    480762 ns/op	       8 B/op	       1 allocs/op
+BenchmarkKavun/loop_sum-12    	    2527	    471230 ns/op	       8 B/op	       1 allocs/op
+BenchmarkKavun/sum_pow-12     	    2192	    543470 ns/op	       8 B/op	       1 allocs/op
+BenchmarkKavun/sum_pow-12     	    2250	    543785 ns/op	       8 B/op	       1 allocs/op
+BenchmarkKavun/sum_pow-12     	    2212	    539074 ns/op	       8 B/op	       1 allocs/op
+BenchmarkKavun/sum_pow-12     	    2200	    543638 ns/op	       8 B/op	       1 allocs/op
+BenchmarkKavun/sum_pow-12     	    2149	    545486 ns/op	       8 B/op	       1 allocs/op
+BenchmarkKavun/closure_counter-12         	   15076	     79272 ns/op	      40 B/op	       3 allocs/op
+BenchmarkKavun/closure_counter-12         	   15266	     78953 ns/op	      40 B/op	       3 allocs/op
+BenchmarkKavun/closure_counter-12         	   15120	     79257 ns/op	      40 B/op	       3 allocs/op
+BenchmarkKavun/closure_counter-12         	   15256	     78144 ns/op	      40 B/op	       3 allocs/op
+BenchmarkKavun/closure_counter-12         	   15312	     78638 ns/op	      40 B/op	       3 allocs/op
+BenchmarkKavun/closures_iife-12           	   17028	     71180 ns/op	       8 B/op	       1 allocs/op
+BenchmarkKavun/closures_iife-12           	   16804	     71602 ns/op	       8 B/op	       1 allocs/op
+BenchmarkKavun/closures_iife-12           	   16705	     71059 ns/op	       8 B/op	       1 allocs/op
+BenchmarkKavun/closures_iife-12           	   16780	     71299 ns/op	       8 B/op	       1 allocs/op
+BenchmarkKavun/closures_iife-12           	   16698	     71034 ns/op	       8 B/op	       1 allocs/op
+BenchmarkKavun/string_concat-12           	   52899	     22125 ns/op	   21472 B/op	     199 allocs/op
+BenchmarkKavun/string_concat-12           	   51129	     22027 ns/op	   21472 B/op	     199 allocs/op
+BenchmarkKavun/string_concat-12           	   54824	     22559 ns/op	   21472 B/op	     199 allocs/op
+BenchmarkKavun/string_concat-12           	   54080	     22364 ns/op	   21472 B/op	     199 allocs/op
+BenchmarkKavun/string_concat-12           	   53432	     22154 ns/op	   21472 B/op	     199 allocs/op
+BenchmarkKavun/str_contains-12            	   15277	     76863 ns/op	    8224 B/op	     399 allocs/op
+BenchmarkKavun/str_contains-12            	   15530	     78151 ns/op	    8224 B/op	     399 allocs/op
+BenchmarkKavun/str_contains-12            	   15253	     78622 ns/op	    8224 B/op	     399 allocs/op
+BenchmarkKavun/str_contains-12            	   15381	     78945 ns/op	    8224 B/op	     399 allocs/op
+BenchmarkKavun/str_contains-12            	   15087	     79677 ns/op	    8224 B/op	     399 allocs/op
+BenchmarkKavun/array_sum-12               	   13821	     86826 ns/op	   23304 B/op	       4 allocs/op
+BenchmarkKavun/array_sum-12               	   13846	     86503 ns/op	   23304 B/op	       4 allocs/op
+BenchmarkKavun/array_sum-12               	   13860	     87427 ns/op	   23304 B/op	       4 allocs/op
+BenchmarkKavun/array_sum-12               	   13858	     85418 ns/op	   23304 B/op	       4 allocs/op
+BenchmarkKavun/array_sum-12               	   13672	     86076 ns/op	   23304 B/op	       4 allocs/op
+BenchmarkKavun/nested_loop-12             	     885	   1307676 ns/op	    2696 B/op	       2 allocs/op
+BenchmarkKavun/nested_loop-12             	     878	   1332149 ns/op	    2696 B/op	       2 allocs/op
+BenchmarkKavun/nested_loop-12             	     903	   1334552 ns/op	    2696 B/op	       2 allocs/op
+BenchmarkKavun/nested_loop-12             	     898	   1306740 ns/op	    2696 B/op	       2 allocs/op
+BenchmarkKavun/nested_loop-12             	     898	   1303767 ns/op	    2696 B/op	       2 allocs/op
+PASS
+ok  	github.com/jokruger/kavun-benchmark/bench/kavun	80.964s
+goos: darwin
+goarch: amd64
+pkg: github.com/jokruger/kavun-benchmark/bench/kavun0
+cpu: Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz
+BenchmarkKavun0/fib-12         	      97	  12518159 ns/op	       8 B/op	       1 allocs/op
+BenchmarkKavun0/fib-12         	      91	  12643356 ns/op	       8 B/op	       1 allocs/op
+BenchmarkKavun0/fib-12         	      91	  12711774 ns/op	       8 B/op	       1 allocs/op
+BenchmarkKavun0/fib-12         	      94	  12725440 ns/op	       8 B/op	       1 allocs/op
+BenchmarkKavun0/fib-12         	      98	  12557079 ns/op	       8 B/op	       1 allocs/op
+BenchmarkKavun0/fib_tail-12    	  734638	      1609 ns/op	       8 B/op	       1 allocs/op
+BenchmarkKavun0/fib_tail-12    	  726616	      1609 ns/op	       8 B/op	       1 allocs/op
+BenchmarkKavun0/fib_tail-12    	  768530	      1602 ns/op	       8 B/op	       1 allocs/op
+BenchmarkKavun0/fib_tail-12    	  754644	      1608 ns/op	       8 B/op	       1 allocs/op
+BenchmarkKavun0/fib_tail-12    	  740312	      1620 ns/op	       8 B/op	       1 allocs/op
+BenchmarkKavun0/loop_sum-12    	    2920	    408009 ns/op	       8 B/op	       1 allocs/op
+BenchmarkKavun0/loop_sum-12    	    3007	    407455 ns/op	       8 B/op	       1 allocs/op
+BenchmarkKavun0/loop_sum-12    	    2824	    407050 ns/op	       8 B/op	       1 allocs/op
+BenchmarkKavun0/loop_sum-12    	    2937	    407803 ns/op	       8 B/op	       1 allocs/op
+BenchmarkKavun0/loop_sum-12    	    2864	    403342 ns/op	       8 B/op	       1 allocs/op
+BenchmarkKavun0/sum_pow-12     	    2511	    476092 ns/op	       8 B/op	       1 allocs/op
+BenchmarkKavun0/sum_pow-12     	    2478	    478593 ns/op	       8 B/op	       1 allocs/op
+BenchmarkKavun0/sum_pow-12     	    2520	    476277 ns/op	       8 B/op	       1 allocs/op
+BenchmarkKavun0/sum_pow-12     	    2502	    463270 ns/op	       8 B/op	       1 allocs/op
+BenchmarkKavun0/sum_pow-12     	    2534	    466205 ns/op	       8 B/op	       1 allocs/op
+BenchmarkKavun0/closure_counter-12         	   17972	     66942 ns/op	     120 B/op	       4 allocs/op
+BenchmarkKavun0/closure_counter-12         	   18147	     66188 ns/op	     120 B/op	       4 allocs/op
+BenchmarkKavun0/closure_counter-12         	   18040	     65827 ns/op	     120 B/op	       4 allocs/op
+BenchmarkKavun0/closure_counter-12         	   18150	     67843 ns/op	     120 B/op	       4 allocs/op
+BenchmarkKavun0/closure_counter-12         	   17499	     68489 ns/op	     120 B/op	       4 allocs/op
+BenchmarkKavun0/closures_iife-12           	   19231	     61976 ns/op	       8 B/op	       1 allocs/op
+BenchmarkKavun0/closures_iife-12           	   19390	     62100 ns/op	       8 B/op	       1 allocs/op
+BenchmarkKavun0/closures_iife-12           	   19347	     61674 ns/op	       8 B/op	       1 allocs/op
+BenchmarkKavun0/closures_iife-12           	   19400	     62005 ns/op	       8 B/op	       1 allocs/op
+BenchmarkKavun0/closures_iife-12           	   19364	     62205 ns/op	       8 B/op	       1 allocs/op
+BenchmarkKavun0/string_concat-12           	   46867	     25432 ns/op	   24672 B/op	     399 allocs/op
+BenchmarkKavun0/string_concat-12           	   47175	     25462 ns/op	   24672 B/op	     399 allocs/op
+BenchmarkKavun0/string_concat-12           	   46866	     25435 ns/op	   24672 B/op	     399 allocs/op
+BenchmarkKavun0/string_concat-12           	   47187	     25404 ns/op	   24672 B/op	     399 allocs/op
+BenchmarkKavun0/string_concat-12           	   47240	     25366 ns/op	   24672 B/op	     399 allocs/op
+BenchmarkKavun0/str_contains-12            	   13618	     87663 ns/op	   14624 B/op	     799 allocs/op
+BenchmarkKavun0/str_contains-12            	   13724	     87109 ns/op	   14624 B/op	     799 allocs/op
+BenchmarkKavun0/str_contains-12            	   13873	     87032 ns/op	   14624 B/op	     799 allocs/op
+BenchmarkKavun0/str_contains-12            	   13455	     88034 ns/op	   14624 B/op	     799 allocs/op
+BenchmarkKavun0/str_contains-12            	   13690	     85780 ns/op	   14624 B/op	     799 allocs/op
+BenchmarkKavun0/array_sum-12               	   12813	     94128 ns/op	   44136 B/op	     512 allocs/op
+BenchmarkKavun0/array_sum-12               	   12679	     94171 ns/op	   44136 B/op	     512 allocs/op
+BenchmarkKavun0/array_sum-12               	   12786	     95108 ns/op	   44136 B/op	     512 allocs/op
+BenchmarkKavun0/array_sum-12               	   12824	     94260 ns/op	   44136 B/op	     512 allocs/op
+BenchmarkKavun0/array_sum-12               	   12681	     95099 ns/op	   44136 B/op	     512 allocs/op
+BenchmarkKavun0/nested_loop-12             	     966	   1238835 ns/op	    2744 B/op	       4 allocs/op
+BenchmarkKavun0/nested_loop-12             	     950	   1235915 ns/op	    2744 B/op	       4 allocs/op
+BenchmarkKavun0/nested_loop-12             	     974	   1247978 ns/op	    2744 B/op	       4 allocs/op
+BenchmarkKavun0/nested_loop-12             	     956	   1237451 ns/op	    2744 B/op	       4 allocs/op
+BenchmarkKavun0/nested_loop-12             	     950	   1249214 ns/op	    2744 B/op	       4 allocs/op
+PASS
+ok  	github.com/jokruger/kavun-benchmark/bench/kavun0	78.800s
+goos: darwin
+goarch: amd64
+pkg: github.com/jokruger/kavun-benchmark/bench/tengo
+cpu: Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz
+BenchmarkTengo/fib-12         	      63	  17320723 ns/op	 2632864 B/op	  317814 allocs/op
+BenchmarkTengo/fib-12         	      69	  17192789 ns/op	 2632781 B/op	  317814 allocs/op
+BenchmarkTengo/fib-12         	      69	  19361633 ns/op	 2632786 B/op	  317814 allocs/op
+BenchmarkTengo/fib-12         	      64	  19377815 ns/op	 2632782 B/op	  317814 allocs/op
+BenchmarkTengo/fib-12         	      67	  17477557 ns/op	 2632778 B/op	  317814 allocs/op
+BenchmarkTengo/fib_tail-12    	   67777	     18147 ns/op	   90608 B/op	      44 allocs/op
+BenchmarkTengo/fib_tail-12    	   66093	     18660 ns/op	   90608 B/op	      44 allocs/op
+BenchmarkTengo/fib_tail-12    	   64814	     18525 ns/op	   90608 B/op	      44 allocs/op
+BenchmarkTengo/fib_tail-12    	   64585	     18924 ns/op	   90608 B/op	      44 allocs/op
+BenchmarkTengo/fib_tail-12    	   62830	     19242 ns/op	   90608 B/op	      44 allocs/op
+BenchmarkTengo/loop_sum-12    	    1603	    753135 ns/op	  250304 B/op	   20006 allocs/op
+BenchmarkTengo/loop_sum-12    	    1618	    741591 ns/op	  250304 B/op	   20006 allocs/op
+BenchmarkTengo/loop_sum-12    	    1617	    740113 ns/op	  250304 B/op	   20006 allocs/op
+BenchmarkTengo/loop_sum-12    	    1585	    751852 ns/op	  250304 B/op	   20006 allocs/op
+BenchmarkTengo/loop_sum-12    	    1633	    741974 ns/op	  250304 B/op	   20006 allocs/op
+BenchmarkTengo/sum_pow-12     	    1149	   1010943 ns/op	  330273 B/op	   30002 allocs/op
+BenchmarkTengo/sum_pow-12     	    1184	   1053290 ns/op	  330272 B/op	   30002 allocs/op
+BenchmarkTengo/sum_pow-12     	    1152	   1019005 ns/op	  330273 B/op	   30002 allocs/op
+BenchmarkTengo/sum_pow-12     	    1167	   1018070 ns/op	  330273 B/op	   30002 allocs/op
+BenchmarkTengo/sum_pow-12     	    1173	   1016015 ns/op	  330273 B/op	   30002 allocs/op
+BenchmarkTengo/closure_counter-12         	   10000	    118344 ns/op	  106416 B/op	    2010 allocs/op
+BenchmarkTengo/closure_counter-12         	   10000	    116743 ns/op	  106416 B/op	    2010 allocs/op
+BenchmarkTengo/closure_counter-12         	    9624	    117650 ns/op	  106416 B/op	    2010 allocs/op
+BenchmarkTengo/closure_counter-12         	   10000	    117276 ns/op	  106416 B/op	    2010 allocs/op
+BenchmarkTengo/closure_counter-12         	   10000	    117802 ns/op	  106416 B/op	    2010 allocs/op
+BenchmarkTengo/closures_iife-12           	   10000	    120158 ns/op	  106296 B/op	    2005 allocs/op
+BenchmarkTengo/closures_iife-12           	   10000	    115440 ns/op	  106296 B/op	    2005 allocs/op
+BenchmarkTengo/closures_iife-12           	    9409	    118816 ns/op	  106296 B/op	    2005 allocs/op
+BenchmarkTengo/closures_iife-12           	   10000	    117349 ns/op	  106296 B/op	    2005 allocs/op
+BenchmarkTengo/closures_iife-12           	   10000	    115561 ns/op	  106296 B/op	    2005 allocs/op
+BenchmarkTengo/string_concat-12           	   22956	     49582 ns/op	  123016 B/op	     606 allocs/op
+BenchmarkTengo/string_concat-12           	   23828	     50616 ns/op	  123016 B/op	     606 allocs/op
+BenchmarkTengo/string_concat-12           	   23688	     49138 ns/op	  123016 B/op	     606 allocs/op
+BenchmarkTengo/string_concat-12           	   23784	     50785 ns/op	  123016 B/op	     606 allocs/op
+BenchmarkTengo/string_concat-12           	   24235	     50283 ns/op	  123016 B/op	     606 allocs/op
+BenchmarkTengo/str_contains-12            	    6564	    179450 ns/op	  146112 B/op	    3302 allocs/op
+BenchmarkTengo/str_contains-12            	    6844	    174861 ns/op	  146112 B/op	    3302 allocs/op
+BenchmarkTengo/str_contains-12            	    6844	    180575 ns/op	  146112 B/op	    3302 allocs/op
+BenchmarkTengo/str_contains-12            	    6733	    182851 ns/op	  146112 B/op	    3302 allocs/op
+BenchmarkTengo/str_contains-12            	    6810	    181387 ns/op	  146112 B/op	    3302 allocs/op
+BenchmarkTengo/array_sum-12               	    6668	    185132 ns/op	  161144 B/op	    3518 allocs/op
+BenchmarkTengo/array_sum-12               	    6583	    193378 ns/op	  161144 B/op	    3518 allocs/op
+BenchmarkTengo/array_sum-12               	    6546	    185322 ns/op	  161144 B/op	    3518 allocs/op
+BenchmarkTengo/array_sum-12               	    6040	    183549 ns/op	  161144 B/op	    3518 allocs/op
+BenchmarkTengo/array_sum-12               	    6156	    180276 ns/op	  161144 B/op	    3518 allocs/op
+BenchmarkTengo/nested_loop-12             	     536	   2189227 ns/op	  586017 B/op	   50717 allocs/op
+BenchmarkTengo/nested_loop-12             	     542	   2222395 ns/op	  586017 B/op	   50717 allocs/op
+BenchmarkTengo/nested_loop-12             	     553	   2197636 ns/op	  586019 B/op	   50717 allocs/op
+BenchmarkTengo/nested_loop-12             	     540	   2211982 ns/op	  586018 B/op	   50717 allocs/op
+BenchmarkTengo/nested_loop-12             	     548	   2186868 ns/op	  586018 B/op	   50717 allocs/op
+PASS
+ok  	github.com/jokruger/kavun-benchmark/bench/tengo	66.410s
