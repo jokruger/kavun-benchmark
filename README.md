@@ -68,6 +68,10 @@ more concisely. The benchmark therefore measures the cost of executing the same 
 cost of each language's preferred idiom for the same problem. Showcasing engine-specific idioms is left as a
 potential future "idiom" suite.
 
+### A note on Starlark
+
+I was not able to implement `closure_counter` and `closures_iife` tests in Starlark.
+
 ## Running
 
 ```sh
