@@ -80,6 +80,17 @@ for i := 0; i < len(s); i++ {
 }
 n
 `,
+			EngineStarlark: `
+s = []
+for i in range(100):
+    s.append(i)
+n = 0
+for i in range(len(s)):
+    for j in range(len(s)):
+        s[j] = s[j] + s[i]
+        n = n + 1
+__result = n
+`,
 		},
 	}
 }

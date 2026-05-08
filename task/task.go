@@ -5,12 +5,13 @@ import "fmt"
 
 // Engine identifiers
 const (
-	EngineKavun  = "kavun"
-	EngineTengo  = "tengo"
-	EngineGoja   = "goja"
-	EngineGoLua  = "golua"
-	EngineGopher = "gopherlua"
-	EngineRisor  = "risor"
+	EngineKavun    = "kavun"
+	EngineTengo    = "tengo"
+	EngineGoja     = "goja"
+	EngineGoLua    = "golua"
+	EngineGopher   = "gopherlua"
+	EngineRisor    = "risor"
+	EngineStarlark = "starlark"
 )
 
 // Task is a single canonical workload.

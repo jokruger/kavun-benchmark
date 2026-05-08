@@ -37,6 +37,12 @@ s := ""
 for i := 0; i < 200; i++ { s += "x" }
 len(s)
 `,
+			EngineStarlark: `
+s = ""
+for i in range(200):
+    s = s + "x"
+__result = len(s)
+`,
 		},
 	}
 }

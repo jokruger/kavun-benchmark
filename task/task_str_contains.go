@@ -84,6 +84,18 @@ for r := 0; r < size*2; r++ {
 }
 n
 `,
+			EngineStarlark: `
+size = 100
+s = ""
+for r in range(size*2):
+    if r % 2 == 0:
+        s = s + chr(32+r)
+n = 0
+for r in range(size*2):
+    if chr(32+r) in s:
+        n = n + 1
+__result = n
+`,
 		},
 	}
 }

@@ -37,6 +37,12 @@ s := 0
 for i := 1; i <= 10000; i++ { s += i }
 s
 `,
+			EngineStarlark: `
+s = 0
+for i in range(1, 10001):
+    s = s + i
+__result = s
+`,
 		},
 	}
 }

@@ -9,6 +9,7 @@ require (
 	github.com/jokruger/kavun v0.1.6
 	github.com/risor-io/risor v1.8.1
 	github.com/yuin/gopher-lua v1.1.2
+	go.starlark.net v0.0.0-20260326113308-fadfc96def35
 )
 
 require (
@@ -18,5 +19,6 @@ require (
 	github.com/google/pprof v0.0.0-20230207041349-798e818bf904 // indirect
 	github.com/jokruger/dec128 v1.0.20 // indirect
 	github.com/jokruger/slab v1.0.3 // indirect
+	golang.org/x/sys v0.42.0 // indirect
 	golang.org/x/text v0.3.8 // indirect
 )

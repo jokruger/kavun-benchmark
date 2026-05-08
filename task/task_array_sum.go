@@ -49,6 +49,15 @@ s := 0
 for i := 0; i < len(a); i++ { s += a[i] }
 s
 `,
+			EngineStarlark: `
+a = []
+for i in range(500):
+    a.append(i)
+s = 0
+for i in range(len(a)):
+    s = s + a[i]
+__result = s
+`,
 		},
 	}
 }

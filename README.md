@@ -15,6 +15,7 @@ Compilation cost is intentionally excluded from measurements.
 - [Go-lua](https://github.com/Shopify/go-lua)
 - [Gopher-lua](https://github.com/yuin/gopher-lua)
 - [Risor](https://github.com/risor-io/risor)
+- [Starlark](https://github.com/google/starlark-go)
 
 ### Note on Kavun vs Kavun0
 

@@ -56,6 +56,13 @@ func fib(x, a, b) {
 }
 fib(20, 0, 1)
 `,
+			EngineStarlark: `
+def fib(x, a, b):
+    if x == 0: return a
+    if x == 1: return b
+    return fib(x-1, b, a+b)
+__result = fib(20, 0, 1)
+`,
 		},
 	}
 }
