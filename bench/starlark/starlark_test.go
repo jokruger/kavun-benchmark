@@ -22,8 +22,8 @@ var starlarkOptions = &syntax.FileOptions{
 }
 
 // starlarkCompile parses and compiles a Starlark program once. Each invocation of the returned runner calls
-// program.Init on a fresh thread, which re-executes the toplevel and returns a new globals dictionary; the value of
-// `__result` is then unwrapped to a Go native via toGo.
+// program.Init on a fresh thread, which re-executes the top level and returns a new globals dictionary; the value of
+// res` is then unwrapped to a Go native via toGo.
 func starlarkCompile(b *testing.B, source string) func() any {
 	b.Helper()
 	_, prog, err := starlark.SourceProgramOptions(starlarkOptions, "bench.star", source, func(string) bool { return false })
@@ -36,7 +36,7 @@ func starlarkCompile(b *testing.B, source string) func() any {
 		if err != nil {
 			b.Fatalf("starlark run: %v", err)
 		}
-		return toGo(globals["__result"])
+		return toGo(globals["res"])
 	}
 }
 

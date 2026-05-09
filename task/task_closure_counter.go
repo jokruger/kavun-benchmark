@@ -13,9 +13,8 @@ make = func() {
   return func() { c += 1; return c }
 }
 counter = make()
-last = 0
-for i = 0; i < 1000; i++ { last = counter() }
-__result = last
+res = 0
+for i = 0; i < 1000; i++ { res = counter() }
 `,
 			EngineTengo: `
 make := func() {
@@ -23,16 +22,18 @@ make := func() {
   return func() { c += 1; return c }
 }
 counter := make()
-last := 0
-for i := 0; i < 1000; i++ { last = counter() }
-__result = last
+res = 0
+for i := 0; i < 1000; i++ { res = counter() }
 `,
 			EngineGoja: `
-function make() { var c = 0; return function() { c += 1; return c; }; }
+function make() {
+  var c = 0;
+  return function() { c += 1; return c; };
+}
 var counter = make();
-var last = 0;
-for (var i = 0; i < 1000; i++) { last = counter(); }
-last;
+var res = 0;
+for (var i = 0; i < 1000; i++) { res = counter(); }
+res;
 `,
 			EngineGoLua: `
 local function make()
@@ -40,9 +41,9 @@ local function make()
   return function() c = c + 1 return c end
 end
 local counter = make()
-local last = 0
-for i = 1, 1000 do last = counter() end
-return last
+local res = 0
+for i = 1, 1000 do res = counter() end
+return res
 `,
 			EngineGopher: `
 local function make()
@@ -50,9 +51,9 @@ local function make()
   return function() c = c + 1 return c end
 end
 local counter = make()
-local last = 0
-for i = 1, 1000 do last = counter() end
-return last
+local res = 0
+for i = 1, 1000 do res = counter() end
+return res
 `,
 			EngineRisor: `
 mk := func() {
@@ -60,9 +61,21 @@ mk := func() {
   return func() { c++; return c }
 }
 counter := mk()
-last := 0
-for i := 0; i < 1000; i++ { last = counter() }
-last
+res := 0
+for i := 0; i < 1000; i++ { res = counter() }
+res
+`,
+			EngineStarlark: `
+def make():
+    c = [0]
+    def inc():
+        c[0] += 1
+        return c[0]
+    return inc
+counter = make()
+res = 0
+for i in range(1000):
+    res = counter()
 `,
 		},
 	}

@@ -1,100 +1,107 @@
 package task
 
-// strContains stresses repeated substring search. Builds a 100-character string of even-coded printable bytes
-// (codes 32, 34, ..., 230), then for each code in [32, 232) asks whether that single character is present.
-// Even codes hit (100), odd codes miss (100), so the answer is 100. Tengo and Kavun use their `text` stdlib module;
-// Goja uses String.prototype.includes.
+// strContains stresses repeated multi-character substring search.
 func strContains() Task {
 	return Task{
 		Name:        "str_contains",
-		Description: "Build a 100-char string of even-coded printable bytes, then probe contains() for each code in [32,232). Stresses substring search.",
-		Expected:    100,
+		Description: "1000 substring searches over a 1000-char haystack, alternating an 8-char hit and miss needle. Stresses substring search.",
+		Expected:    500,
 		Sources: map[string]string{
 			EngineKavun: `
-text = import("text")
-size = 100
-s = ""
-for r = 0; r < size*2; r++ {
-  if r%2 == 0 { s += string(rune(32+r)) }
+h = "abcdefghijABCDEFGHIJ".repeat(50)
+hit = "ijABCDEF"
+miss = "ijABCDEZ"
+res = 0
+for i = 0; i < 1000; i++ {
+  if i % 2 == 0 {
+    if hit in h { res += 1 }
+  } else {
+    if miss in h { res += 1 }
+  }
 }
-n = 0
-for r = 0; r < size*2; r++ {
-  if text.contains(s, string(rune(32+r))) { n += 1 }
-}
-__result = n
 `,
 			EngineTengo: `
 text := import("text")
-size := 100
-s := ""
-for r := 0; r < size*2; r++ {
-  if r%2 == 0 { s += string(char(32+r)) }
+h := text.repeat("abcdefghijABCDEFGHIJ", 50)
+hit := "ijABCDEF"
+miss := "ijABCDEZ"
+res = 0
+for i := 0; i < 1000; i++ {
+  if i % 2 == 0 {
+    if text.contains(h, hit) { res += 1 }
+  } else {
+    if text.contains(h, miss) { res += 1 }
+  }
 }
-n := 0
-for r := 0; r < size*2; r++ {
-  if text.contains(s, string(char(32+r))) { n += 1 }
-}
-__result = n
 `,
 			EngineGoja: `
-var size = 100;
-var s = "";
-for (var r = 0; r < size*2; r++) {
-  if (r % 2 === 0) { s += String.fromCharCode(32+r); }
+var h = "abcdefghijABCDEFGHIJ".repeat(50);
+var hit = "ijABCDEF";
+var miss = "ijABCDEZ";
+var res = 0;
+for (var i = 0; i < 1000; i++) {
+  if (i % 2 === 0) {
+    if (h.includes(hit)) { res += 1; }
+  } else {
+    if (h.includes(miss)) { res += 1; }
+  }
 }
-var n = 0;
-for (var r = 0; r < size*2; r++) {
-  if (s.includes(String.fromCharCode(32+r))) { n += 1; }
-}
-n;
+res;
 `,
 			EngineGoLua: `
-local size = 100
-local s = ""
-for r = 0, size*2-1 do
-  if r % 2 == 0 then s = s .. string.char(32+r) end
+local h = string.rep("abcdefghijABCDEFGHIJ", 50)
+local hit = "ijABCDEF"
+local miss = "ijABCDEZ"
+local res = 0
+for i = 0, 999 do
+  if i % 2 == 0 then
+    if string.find(h, hit, 1, true) then res = res + 1 end
+  else
+    if string.find(h, miss, 1, true) then res = res + 1 end
+  end
 end
-local n = 0
-for r = 0, size*2-1 do
-  if string.find(s, string.char(32+r), 1, true) then n = n + 1 end
-end
-return n
+return res
 `,
 			EngineGopher: `
-local size = 100
-local s = ""
-for r = 0, size*2-1 do
-  if r % 2 == 0 then s = s .. string.char(32+r) end
+local h = string.rep("abcdefghijABCDEFGHIJ", 50)
+local hit = "ijABCDEF"
+local miss = "ijABCDEZ"
+local res = 0
+for i = 0, 999 do
+  if i % 2 == 0 then
+    if string.find(h, hit, 1, true) then res = res + 1 end
+  else
+    if string.find(h, miss, 1, true) then res = res + 1 end
+  end
 end
-local n = 0
-for r = 0, size*2-1 do
-  if string.find(s, string.char(32+r), 1, true) then n = n + 1 end
-end
-return n
+return res
 `,
 			EngineRisor: `
-size := 100
-s := ""
-for r := 0; r < size*2; r++ {
-  if r % 2 == 0 { s += chr(32+r) }
+h := strings.repeat("abcdefghijABCDEFGHIJ", 50)
+hit := "ijABCDEF"
+miss := "ijABCDEZ"
+res := 0
+for i := 0; i < 1000; i++ {
+  if i % 2 == 0 {
+    if strings.contains(h, hit) { res++ }
+  } else {
+    if strings.contains(h, miss) { res++ }
+  }
 }
-n := 0
-for r := 0; r < size*2; r++ {
-  if strings.contains(s, chr(32+r)) { n++ }
-}
-n
+res
 `,
 			EngineStarlark: `
-size = 100
-s = ""
-for r in range(size*2):
-    if r % 2 == 0:
-        s = s + chr(32+r)
-n = 0
-for r in range(size*2):
-    if chr(32+r) in s:
-        n = n + 1
-__result = n
+h = "abcdefghijABCDEFGHIJ" * 50
+hit = "ijABCDEF"
+miss = "ijABCDEZ"
+res = 0
+for i in range(1000):
+    if i % 2 == 0:
+        if hit in h:
+            res = res + 1
+    else:
+        if miss in h:
+            res = res + 1
 `,
 		},
 	}

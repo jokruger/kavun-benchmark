@@ -49,28 +49,10 @@ it can; missing tasks are penalized in the summary.
 | `sum_pow`         | Loops + integer multiplication on the hot path                |
 | `closure_counter` | Closure creation + repeated invocation of one closure         |
 | `closures_iife`   | Repeated closure creation-and-invoke per iteration            |
-| `string_concat`   | String allocation/concatenation                               |
-| `str_contains`    | Repeated substring search via the `text` stdlib module        |
-| `array_sum`       | Array creation, indexed access                                |
-| `nested_loop`     | Nested loop with in-place array index read+write              |
-
-### A note on idiomatic vs portable implementations
-
-Some engines expose richer language features than others. Kavun, for example, has fluent collection methods and arrow
-lambdas that let many of these tasks be written as one-liners — `sum_pow` could be
-`range(1, 10000, 1).reduce(0, (a, b) => a + b * b)`, and `string_concat` / `str_contains` have similarly compact
-`.map(...)` / `.filter(...)` / `.upper()` formulations. So, an idiomatic Kavun version would have no fair counterpart
-in the other engines.
-
-To keep the comparison apples-to-apples, every task uses the same shape of implementation across all engines —
-typically explicit `for` loops, indexed access, and small functions — even when an engine could express the workload
-more concisely. The benchmark therefore measures the cost of executing the same algorithm on each runtime, not the
-cost of each language's preferred idiom for the same problem. Showcasing engine-specific idioms is left as a
-potential future "idiom" suite.
-
-### A note on Starlark
-
-I was not able to implement `closure_counter` and `closures_iife` tests in Starlark.
+| `string_concat`   | String allocation via repeated `+=` concatenation             |
+| `string_repeat`   | String building via the language's idiomatic repeat builtin   |
+| `str_contains`    | Repeated multi-character substring search                     |
+| `array_dot`       | Array creation, indexed access                                |
 
 ## Running
 

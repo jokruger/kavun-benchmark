@@ -12,12 +12,12 @@ import (
 )
 
 // tengoCompile prepares a Tengo script for repeated execution. Returned runner performs one full execution and returns
-// the value stored in the script's __result global.
+// the value stored in the script's res global.
 func tengoCompile(b *testing.B, source string) func() any {
 	b.Helper()
 	s := tengo.NewScript([]byte(source))
 	s.SetImports(stdlib.GetModuleMap(stdlib.AllModuleNames()...))
-	if err := s.Add("__result", int64(0)); err != nil {
+	if err := s.Add("res", int64(0)); err != nil {
 		b.Fatalf("tengo add global: %v", err)
 	}
 	c, err := s.Compile()
@@ -29,7 +29,7 @@ func tengoCompile(b *testing.B, source string) func() any {
 		if err := c.RunContext(ctx); err != nil {
 			b.Fatalf("tengo run: %v", err)
 		}
-		v := c.Get("__result")
+		v := c.Get("res")
 		if v == nil {
 			return nil
 		}

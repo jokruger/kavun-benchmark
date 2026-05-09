@@ -14,7 +14,7 @@ fib = func(x, a, b) {
   if x == 1 { return b }
   return fib(x-1, b, a+b)
 }
-__result = fib(20, 0, 1)
+res = fib(20, 0, 1)
 `,
 			EngineTengo: `
 fib := func(x, a, b) {
@@ -22,7 +22,7 @@ fib := func(x, a, b) {
   if x == 1 { return b }
   return fib(x-1, b, a+b)
 }
-__result = fib(20, 0, 1)
+res = fib(20, 0, 1)
 `,
 			EngineGoja: `
 function fib(x, a, b) {
@@ -61,7 +61,7 @@ def fib(x, a, b):
     if x == 0: return a
     if x == 1: return b
     return fib(x-1, b, a+b)
-__result = fib(20, 0, 1)
+res = fib(20, 0, 1)
 `,
 		},
 	}

@@ -10,12 +10,12 @@ func stringConcat() Task {
 			EngineKavun: `
 s = ""
 for i = 0; i < 200; i++ { s += "x" }
-__result = len(s)
+res = len(s)
 `,
 			EngineTengo: `
 s := ""
 for i := 0; i < 200; i++ { s += "x" }
-__result = len(s)
+res = len(s)
 `,
 			EngineGoja: `
 var s = "";
@@ -41,7 +41,7 @@ len(s)
 s = ""
 for i in range(200):
     s = s + "x"
-__result = len(s)
+res = len(s)
 `,
 		},
 	}

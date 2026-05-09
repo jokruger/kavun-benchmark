@@ -29,11 +29,10 @@ var All = []Task{
 	loopSum(),
 	sumPow(),
 	closureCounter(),
-	closuresIIFE(),
 	stringConcat(),
+	stringRepeat(),
 	strContains(),
-	arraySum(),
-	nestedLoop(),
+	arrayDot(),
 }
 
 // Names returns the canonical task names in registry order.

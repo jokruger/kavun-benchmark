@@ -8,40 +8,37 @@ func loopSum() Task {
 		Expected:    50005000,
 		Sources: map[string]string{
 			EngineKavun: `
-s = 0
-for i = 1; i <= 10000; i++ { s += i }
-__result = s
+res = 0
+for i := 1; i <= 10000; i++ { res += i }
 `,
 			EngineTengo: `
-s := 0
-for i := 1; i <= 10000; i++ { s += i }
-__result = s
+res = 0
+for i := 1; i <= 10000; i++ { res += i }
 `,
 			EngineGoja: `
-var s = 0;
-for (var i = 1; i <= 10000; i++) { s += i; }
-s;
+var res = 0;
+for (var i = 1; i <= 10000; i++) { res += i; }
+res;
 `,
 			EngineGoLua: `
-local s = 0
-for i = 1, 10000 do s = s + i end
-return s
+local res = 0
+for i = 1, 10000 do res = res + i end
+return res
 `,
 			EngineGopher: `
-local s = 0
-for i = 1, 10000 do s = s + i end
-return s
+local res = 0
+for i = 1, 10000 do res = res + i end
+return res
 `,
 			EngineRisor: `
-s := 0
-for i := 1; i <= 10000; i++ { s += i }
-s
+res := 0
+for i := 1; i <= 10000; i++ { res += i }
+res
 `,
 			EngineStarlark: `
-s = 0
+res = 0
 for i in range(1, 10001):
-    s = s + i
-__result = s
+    res = res + i
 `,
 		},
 	}

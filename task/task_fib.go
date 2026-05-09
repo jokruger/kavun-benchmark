@@ -12,17 +12,20 @@ fib = func(n) {
   if n < 2 { return n }
   return fib(n-1) + fib(n-2)
 }
-__result = fib(25)
+res = fib(25)
 `,
 			EngineTengo: `
 fib := func(n) {
   if n < 2 { return n }
   return fib(n-1) + fib(n-2)
 }
-__result = fib(25)
+res = fib(25)
 `,
 			EngineGoja: `
-function fib(n) { return n < 2 ? n : fib(n-1) + fib(n-2); }
+function fib(n) {
+  if (n < 2) return n;
+  return fib(n-1) + fib(n-2);
+}
 fib(25);
 `,
 			EngineGoLua: `
@@ -50,7 +53,7 @@ fib(25)
 def fib(n):
     if n < 2: return n
     return fib(n-1) + fib(n-2)
-__result = fib(25)
+res = fib(25)
 `,
 		},
 	}

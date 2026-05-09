@@ -10,8 +10,7 @@ func stringRepeat() Task {
 		Expected:    200,
 		Sources: map[string]string{
 			EngineKavun: `
-text = import("text")
-s = text.repeat("x", 200)
+s = "x".repeat(200)
 res = len(s)
 `,
 			EngineTengo: `
@@ -20,19 +19,24 @@ s := text.repeat("x", 200)
 res = len(s)
 `,
 			EngineGoja: `
-"x".repeat(200).length;
+var s = "x".repeat(200)
+s.length;
 `,
 			EngineGoLua: `
-return #string.rep("x", 200)
+local s = string.rep("x", 200)
+return #s
 `,
 			EngineGopher: `
-return #string.rep("x", 200)
+local s = string.rep("x", 200)
+return #s
 `,
 			EngineRisor: `
-len(strings.repeat("x", 200))
+s := strings.repeat("x", 200)
+len(s)
 `,
 			EngineStarlark: `
-res = len("x" * 200)
+s = "x" * 200
+res = len(s)
 `,
 		},
 	}

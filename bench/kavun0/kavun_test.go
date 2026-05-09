@@ -36,12 +36,12 @@ func allocOptions() *core.ArenaOptions {
 }
 
 // kavunCompile prepares a Kavun script for repeated execution. The runner re-runs the compiled bytecode and returns
-// the value stored in the script's __result global.
+// the value stored in the script's res global.
 func kavunCompile(b *testing.B, source string) func() any {
 	b.Helper()
 	s := kavun.NewScript([]byte(source))
 	s.SetImports(stdlib.GetModuleMap(stdlib.AllModuleNames()...))
-	s.Add("__result", core.Undefined)
+	s.Add("res", core.Undefined)
 	cta := core.NewArena(nil)
 	rta := core.NewArena(allocOptions())
 	machine := vm.NewVM(vm.DefaultMaxFrames, vm.DefaultStackSize)
@@ -53,7 +53,7 @@ func kavunCompile(b *testing.B, source string) func() any {
 		if err := compiled.Run(rta, machine); err != nil {
 			b.Fatalf("kavun run: %v", err)
 		}
-		v := compiled.GetValue("__result")
+		v := compiled.GetValue("res")
 		if n, ok := v.AsInt(); ok {
 			return n
 		}

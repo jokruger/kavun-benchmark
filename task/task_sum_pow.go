@@ -9,40 +9,37 @@ func sumPow() Task {
 		Expected:    333283335000,
 		Sources: map[string]string{
 			EngineKavun: `
-s = 0
-for i = 1; i < 10000; i++ { s += i * i }
-__result = s
+res = 0
+for i := 1; i < 10000; i++ { res += i * i }
 `,
 			EngineTengo: `
-s := 0
-for i := 1; i < 10000; i++ { s += i * i }
-__result = s
+res = 0
+for i := 1; i < 10000; i++ { res += i * i }
 `,
 			EngineGoja: `
-var s = 0;
-for (var i = 1; i < 10000; i++) { s += i * i; }
-s;
+var res = 0;
+for (var i = 1; i < 10000; i++) { res += i * i; }
+res;
 `,
 			EngineGoLua: `
-local s = 0
-for i = 1, 9999 do s = s + i * i end
-return s
+local res = 0
+for i = 1, 9999 do res = res + i * i end
+return res
 `,
 			EngineGopher: `
-local s = 0
-for i = 1, 9999 do s = s + i * i end
-return s
+local res = 0
+for i = 1, 9999 do res = res + i * i end
+return res
 `,
 			EngineRisor: `
-s := 0
-for i := 1; i < 10000; i++ { s += i * i }
-s
+res := 0
+for i := 1; i < 10000; i++ { res += i * i }
+res
 `,
 			EngineStarlark: `
-s = 0
+res = 0
 for i in range(1, 10000):
-    s = s + i * i
-__result = s
+    res = res + i * i
 `,
 		},
 	}
