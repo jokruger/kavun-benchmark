@@ -21,8 +21,8 @@ github.com/google/pprof v0.0.0-20230207041349-798e818bf904 h1:4/hN5RUoecvl+RmJRE
 github.com/google/pprof v0.0.0-20230207041349-798e818bf904/go.mod h1:uglQLonpP8qtYCYyzA+8c/9qtqgA3qsXGYqCPKARAFg=
 github.com/jokruger/dec128 v1.0.20 h1:GCEDL/FnkNY6ncCit1j+J/1ALY+cAJBSZR1wqZeVe9s=
 github.com/jokruger/dec128 v1.0.20/go.mod h1:XmLxm2Jow2CB5IBBR/VhC4MiAkwBzvP9nZBO9n/1VXI=
-github.com/jokruger/kavun v0.1.6 h1:23O00UDlNKNjR9NvL7BVubODuuVqrKFzHuPwMtU+OVQ=
-github.com/jokruger/kavun v0.1.6/go.mod h1:T4ORKEoyySjddniaxj6Ob04YmVQDcj9kx1pgtZCA1pk=
+github.com/jokruger/kavun v0.2.1 h1:DsBtScFoyOl+zGYP4W+spB8BThaC2C2lbtZ3xTHjzsU=
+github.com/jokruger/kavun v0.2.1/go.mod h1:T4ORKEoyySjddniaxj6Ob04YmVQDcj9kx1pgtZCA1pk=
 github.com/jokruger/slab v1.0.3 h1:HgLI8QMk0uZdOjcH6QwgVczPPX3xz80f5qB9tc5Zq4A=
 github.com/jokruger/slab v1.0.3/go.mod h1:mGZo0kff3q4QodtFl1KvsdM9YO/IfzQz4QO+PbS48p0=
 github.com/mattn/go-runewidth v0.0.10/go.mod h1:RAqKPSqVFrSLVXbA8x7dzmKdmGzieGRCM46jaSJTDAk=

@@ -20,7 +20,6 @@ func allocOptions() *core.ArenaOptions {
 	opts.ArraysNum = 0
 	opts.BuiltinFunctions = 0
 	opts.CompiledFunctions = 0
-	opts.ErrorValues = 0
 	opts.StringValues = 0
 	opts.RunesValues = 0
 	opts.BytesValues = 0
