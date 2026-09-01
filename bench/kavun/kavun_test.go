@@ -6,6 +6,7 @@ import (
 
 	"github.com/jokruger/kavun"
 	"github.com/jokruger/kavun-benchmark/task"
+	"github.com/jokruger/kavun/compiler"
 	"github.com/jokruger/kavun/vm"
 )
 
@@ -14,6 +15,7 @@ import (
 func kavunCompile(b *testing.B, source string) func() any {
 	b.Helper()
 	s := kavun.NewScript([]byte(source), "res")
+	s.SetOptimizationConfig(compiler.O0()) // disable optimizations
 	machine := vm.NewVM(vm.DefaultMaxFrames, vm.DefaultStackSize)
 	compiled, err := s.Compile()
 	if err != nil {
@@ -23,7 +25,10 @@ func kavunCompile(b *testing.B, source string) func() any {
 		if err := compiled.Run(machine); err != nil {
 			b.Fatalf("kavun run: %v", err)
 		}
-		v := compiled.Get("res")
+		v, err := compiled.Get("res")
+		if err != nil {
+			b.Fatalf("kavun get: %v", err)
+		}
 		if n, ok := v.AsInt(); ok {
 			return n
 		}

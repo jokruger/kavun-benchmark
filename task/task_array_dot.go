@@ -11,8 +11,8 @@ func arrayDot() Task {
 		Expected:    83083500,
 		Sources: map[string]string{
 			EngineKavun: `
-a = [0].repeat(500)
-b = [0].repeat(500)
+a = array(0, 500)
+b = array(0, 500)
 for i = 0; i < 500; i++ { a[i] = i; b[i] = 2*i }
 res = 0
 for i = 0; i < 500; i++ { res += a[i] * b[i] }

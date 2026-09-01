@@ -6,7 +6,7 @@ require (
 	github.com/Shopify/go-lua v0.0.0-20250718183320-1e37f32ad7d0
 	github.com/d5/tengo/v2 v2.17.0
 	github.com/dop251/goja v0.0.0-20260311135729-065cd970411c
-	github.com/jokruger/kavun v0.4.1
+	github.com/jokruger/kavun v0.7.1
 	github.com/risor-io/risor v1.8.1
 	github.com/yuin/gopher-lua v1.1.2
 	go.starlark.net v0.0.0-20260613233743-8ba36ccb83fb
